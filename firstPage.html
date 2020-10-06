@@ -1,0 +1,386 @@
+HTML
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- metadata goes in the head -->
+    <title>My First Page</title>
+</head>
+
+<body>
+    <!-- content goes in the body -->
+
+    <h1>This is my first tag!!!</h1>
+    <h2>This is a heading!</h2>
+    <h6>This is an another heading!</h6>
+    <!--headings get smaller as the numbers get higher-->
+
+    <p>This is a paragraph.</p>
+    <p><b>This is a paragraph too but it is also bold.</b></p>
+    <p>I can also do this bold like <strong>this</strong>.</p>
+    <p>Or maybe I want something to be italic. For example here is <i>something in italic.</i></p>
+    <p>If I want emphasis on a text which is the same thing as being italized, I can do it by <em>simply like this.</em></p>
+
+    <!--h's and p's are block level elements which takes out their own lines.-->
+
+
+    <ol>This is a tag for an ordered list.</ol>
+    <li>These are the list items for the ordered list.</li>
+    <li>These are the list items for the ordered list.</li>
+
+    <!--Combining these two list tags looks something like this:-->
+    <h4>Color List</h4>
+    <ol>
+        <li>Pastel</li>
+        <li>White</li>
+        <li>Black</li>
+    </ol>
+    <!--That was ordered but this is unordered:-->
+    <ul>
+        <li>Pastel</li>
+        <li>White</li>
+        <li>Black</li>
+    </ul>
+    <!--I can also mix it up like such:-->
+    <ol>
+        <li><strong>White</strong></li>
+        <li><em>Black</em></li>
+    </ol>
+    <!--If I really want to go crazy I can also do this:-->
+    <ol>
+        <li>Pastel</li>
+        <li>White</li>
+        <li>Black
+            <ul>
+                <li>like my soul</li>
+                <ol>
+                    <li>uwu</li>
+                    <li>so edgy</li>
+                    <li>im sooo quirky</li>
+                    <li>im not like other girls</li>
+                </ol>
+            </ul>
+        </li>
+    </ol>
+
+
+    <!--div and span are generic containers which means they both group the contents but div is block level element which takes up all the line, on the other hand span is an in line container -->
+    <div>groups some content together</div>
+    <span>groups some content together</span>
+
+    <!--sooo something like this:-->
+    <div>
+        <h1>bla bla bla </h1>
+        <p>more bla bla bla</p>
+    </div>
+    <!--now these two (head and paragraph) are grouped, it doesn't show like it but if I style the context it will. like highlighting, borders etc.-->
+
+
+    <img src="https://cdn2-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg">
+
+    <a href="http://www.google.com">Click me to go to Google.</a>
+    <!--anchor tags are the buttons which take you to somewhere like links etc. (in line element)-->
+
+
+    <table border="1">
+        <!--tr stands for "table rows"-->
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>İdil</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>Burak</td>
+            <td>18</td>
+        </tr>
+    </table>
+    <!--I can also do this like this:-->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>İdil</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>Burak</td>
+                <td>18</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form action="is the url to send form data to" method="is the type of HTTP request">
+        <!--all the inputs will go here-->
+        <input type="text">
+        <input type="color">
+        <input type="file">
+        <input type="date">
+        <input type="checkbox">
+    </form>
+    <!--without a Back End JS, the forms don't do anything-->
+    <h1>Sign In</h1>
+    <form action="sing-in-url" method="post">
+        <input type="text">
+        <input type="password">
+        <button>LogIn</button>
+    </form>
+    <!--form tag is a block level element-->
+    <h1>Login</h1>
+    <form action="http://www.wikipedia.org" method="GET">
+        <input name="username" type="text" placeholder="username">
+        <input name="password" type="text" placeholder="password">
+        <button>Submit</button>
+    </form>
+
+    <form action="http://www.wikipedia.org">
+        <label>
+	Username:
+	<input type="text" placeholder="username">
+ </label>
+
+        <label>
+	Password:
+	<input type="password" placeholder="password">
+ </label>
+        <input type="submit">
+    </form>
+    <!--the difference between these two (up and the bottom) is that at the bottom one label and input is not actually connected, although it lookes the same-->
+    <form action="http://www.wikipedia.org">
+        <label>Username:</label>
+        <input type="text" placeholder="username">
+        <label>Password:</label>
+        <input type="password" placeholder="password">
+        <input type="submit">
+    </form>
+    <!--to connect, we should use a "for" attribute such as:-->
+    <form action="http://www.wikipedia.org">
+
+        <label for="email">Email</label>
+        <input id="email" type="text" placeholder="email" required>
+
+        <label for="username">Username:</label>
+        <input id="username" type="text" placeholder="username" required>
+
+        <label for="password">Password:</label>
+        <input id="password" type="password" placeholder="password" required>
+
+        <input type="submit">
+    </form>
+    <!--additional ways to get user input:-->
+    <input type="radio">
+    <input type="checkbox">
+    <!--checkbox allows user to select/unselect while radio only allows to select
+radio is usually used in situation where you only have to check one box (such as selecting gender)-->
+
+    <form>
+        <p>Do you prefer cats or dogs?</p>
+        <label for="dogs">Dogs:</label>
+        <input name="petchoice" id="dogs" type="radio" value="DOGS">
+        <!--name attribute is used for html to identify two inputs together, this way the user cannot choose dog and cat at the same time and it appears on the URL-->
+        <label for="cats">Cats:</label>
+        <input name="petchoice" id="cats" type="radio" value="CATS">
+
+        <p>What's your favourite color?</p>
+        <select name="favcolor">
+    	<option></option>
+		<option>White</option>
+		<option>Black</option>
+		<option>Blue</option>
+		<option>Green</option>
+		<option>Red</option>
+		<option>Pink</option>
+		<option>Purple</option>
+		<option>Orange</option>
+		<option>Yellow</option>
+    </select>
+        <button>Go!</button>
+
+        <p>What's your current mood?</p>
+        <select name="mood">
+		<option value="happy">:)</option>
+		<option value="sad">:(</option>
+    </select>
+
+        <textarea name="paragraph" rows="10" cols="50"></textarea>
+        <button>Go!</button>
+    </form>
+
+</body>
+
+</html>
+
+
+PROJECT 3
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration</title>
+</head>
+
+<body>
+    <h1>Register</h1>
+
+    <form>
+        <label for="firstname">First Name:</label>
+        <input type="text" placeholder="John" required>
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" placeholder="Smith" required>
+
+        <div>
+            <label for="Male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+
+            <label for="Female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+
+            <label for="Other">Other</label>
+            <input type="radio" name="gender" id="other" value="other">
+        </div>
+
+        <div>
+            <label>Email:
+			<input id="email" type="text" name="email" placeholder="your mail" required>
+	    </label>
+
+            <label>Password:
+	        <input id="password" type="password" name="password" pattern=".{5,10}" required title="Password must be between 5 to 10 characters">
+	    </label>
+        </div>
+
+        <div>
+            <label>Birthday:
+			<select name="day">
+				<option>Day</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+            </select>
+			<select name="month">
+				<option>Month</option>
+				<option>Jan</option>
+				<option>Feb</option>
+				<option>Mar</option>
+			</select>
+			<select name="year">
+				<option>Year</option>
+				<option>1998</option>
+				<option>1999</option>
+				<option>2000</option>
+			</select>
+        </label>
+        </div>
+
+        <div>
+            <label for="agreed">I agree to the terms and conditions.</label>
+            <input id="agreed" name="agreed" type="checkbox">
+        </div>
+
+
+        <form>
+            <input type="submit">
+        </form>
+
+</body>
+
+</html>
+
+PROJECT 2
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pokemon Chart</title>
+</head>
+
+<body>
+    <h1>First Gen Pokemon Chart</h1>
+
+    <table border="1">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Evolves Into</th>
+        </tr>
+
+        <tr>
+            <td><img width="100" src="http://img4.wikia.nocookie.net/__cb20140328190757/pokemon/images/thumb/2/21/001Bulbasaur.png/200px-001Bulbasaur.png"></td>
+            <td>Bulbasaur</td>
+            <td>Grass/Poison</td>
+            <td><a href="http://pokemon.wikia.com/wiki/Ivysaur">Ivysaur</a></td>
+        </tr>
+
+        <tr>
+            <td><img width="100" src="http://img4.wikia.nocookie.net/__cb20140724195345/pokemon/images/thumb/7/73/004Charmander.png/200px-004Charmander.png"></td>
+            <td>Charmander</td>
+            <td>Fire</td>
+            <td><a href="http://pokemon.wikia.com/wiki/Charmeleon">Charmaleon</a></td>
+        </tr>
+
+        <tr>
+            <td><img width="100" src="http://img1.wikia.nocookie.net/__cb20140328191525/pokemon/images/thumb/3/39/007Squirtle.png/200px-007Squirtle.png"></td>
+            <td>Squirtle</td>
+            <td>Water</td>
+            <td><a href="http://pokemon.wikia.com/wiki/Wartortle">Wartortle</a></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
+
+PROJECT 1
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>Things I've Learned</h1>
+</head>
+
+<body>
+    <h2>Internet Basics</h2>
+    <ol>
+        <li>HTTP Requests</li>
+        <li>IP Adresses</li>
+        <li>Servers</li>
+    </ol>
+
+    <h2>HTML</h2>
+    <ul>
+        <li>Stands for <strong>Hyper Text Markup Language</strong></li>
+        <li>Lots of tags</li>
+        <ul>
+            <li>Boilerplate</li>
+            <ol>
+                <li>Docktype</li>
+                <li>HTML</li>
+                <li>Head</li>
+                <ol>
+                    <li>Title</li>
+                </ol>
+                <li>Body</li>
+            </ol>
+            <li>Headings</li>
+            <li>Paragraph</li>
+            <li><em>em</em></li>
+            <li><strong>strong</strong></li>
+        </ul>
+    </ul>
+
+</body>
+
+</html>
+
+
+CSS selector{ property: value; anotherproperty: value; }

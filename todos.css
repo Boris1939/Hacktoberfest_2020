@@ -1,0 +1,24 @@
+body{
+  background: orange;
+}
+li{
+  border: 2px solid red;
+}
+div{
+  background: blue;
+  }
+  #icannamethisliterallyanything {
+    color: white;
+  }
+  .highlight{
+    background: yellow;
+  }
+  .completed{
+    text-decoration: line-through;
+  }
+#special {
+  background: grey
+}
+#otherspecial {
+  background: pink
+}
